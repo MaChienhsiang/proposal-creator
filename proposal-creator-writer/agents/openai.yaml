@@ -1,0 +1,6 @@
+interface:
+  display_name: "proposal-creator-writer"
+  short_description: "按项目类型共同讨论研究结构与目标，组织论证并完成正文编写和修订"
+  default_prompt: "使用 $proposal-creator-writer，根据适用申报要求、研究问题与已有证据讨论整体方案，并完成指定章节。"
+policy:
+  allow_implicit_invocation: false

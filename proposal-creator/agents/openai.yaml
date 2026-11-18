@@ -1,0 +1,6 @@
+interface:
+  display_name: "proposal-creator"
+  short_description: "适配多方向理工科项目，支持全自动与共同写作、证据整理和独立评审"
+  default_prompt: "使用 $proposal-creator，根据申报要求、研究问题和已有资料，适配项目类型与研究方法后推进申请书。支持 auto-pilot 全自动与 co-write 共同写作，请沿用我已指定的模式和参与方式。"
+policy:
+  allow_implicit_invocation: true

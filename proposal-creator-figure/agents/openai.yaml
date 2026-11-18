@@ -1,0 +1,6 @@
+interface:
+  display_name: "proposal-creator-figure"
+  short_description: "按方案图与数据证据图区分绘图流程，交付可编辑源图和验收结果"
+  default_prompt: "使用 $proposal-creator-figure，根据已确认的研究关系或真实数据选择绘图流程，生成并验收图件。"
+policy:
+  allow_implicit_invocation: false

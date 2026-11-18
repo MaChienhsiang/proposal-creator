@@ -1,0 +1,6 @@
+interface:
+  display_name: "proposal-creator-foundation"
+  short_description: "从旧项目资料提炼真实积累，映射新任务的支撑、迁移条件与缺口"
+  default_prompt: "使用 $proposal-creator-foundation，从给定旧项目资料提炼能够支撑新申请的研究基础，并保留来源和边界。"
+policy:
+  allow_implicit_invocation: false
