@@ -20,7 +20,7 @@
     {
       "id": 2,
       "name": "foundation-direct-entry",
-      "prompt": "只运行 proposal-creator-foundation。根据 mini-guide.md 的旧项目摘录，提炼可支撑新项目的研究基础，逐条列来源、已完成事实、支撑任务、直接/可迁移/待核实/缺口、迁移条件。不要写整份申请书，也不要联网。保存 result.md。",
+      "prompt": "只运行 proposal-creator foundation。根据 mini-guide.md 的旧项目摘录，提炼可支撑新项目的研究基础，逐条列来源、已完成事实、支撑任务、直接/可迁移/待核实/缺口、迁移条件。不要写整份申请书，也不要联网。保存 result.md。",
       "expected_output": "只执行 B；S1计划与S2完成事实区分，单机不证明多机能力，没有虚构检测率或论文。",
       "files": [
         "evals/fixtures/mini-guide.md"
@@ -36,7 +36,7 @@
     {
       "id": 3,
       "name": "reviewer-figure-evidence-boundaries",
-      "prompt": "只运行 proposal-creator-reviewer，评审下面的拟稿并给出首轮问题，不改写正文。拟稿称：已建成50架平台、检测率99%，论文S4证实加速方法减少90%样本；准备把目标95%画成已达成柱状图，并绘制总体路线图。依据只有 mini-guide.md。推荐应分别如何交给 A/B/C/D 修复，C 两类图应调用哪个skill？采用交互模式，问题按依赖分轮，本轮未决问题的下游不要提前问。不要联网、不要创建子agent。保存 result.md。",
+      "prompt": "只运行 proposal-creator reviewer，评审下面的拟稿并给出首轮问题，不改写正文。拟稿称：已建成50架平台、检测率99%，论文S4证实加速方法减少90%样本；准备把目标95%画成已达成柱状图，并绘制总体路线图。依据只有 mini-guide.md。推荐应分别如何交给 A/B/C/D 修复，C 两类图应调用哪个skill？采用交互模式，问题按依赖分轮，本轮未决问题的下游不要提前问。不要联网、不要创建子agent。保存 result.md。",
       "expected_output": "E不改正文，识别伪完成、无数据和引用不支持，提出有推荐答案的独立前提问题；总体路线nsfc-figure，真实性能nature-figure但数据不足不执行。",
       "files": [
         "evals/fixtures/mini-guide.md"

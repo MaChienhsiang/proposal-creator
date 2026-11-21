@@ -1,6 +1,6 @@
 # Proposal Creator
 
-面向多方向理工科科研申请书的五角色工作流，共六个可独立调用入口，命令名与界面显示名统一使用英文。主入口明确支持 auto-pilot 全自动和 co-write 共同写作。A 提方案和写作，B 提炼内部基础，C 绘图，D 核外部依据，E 独立追问与评审。
+面向多方向理工科科研申请书的五角色工作流，通过一个技能入口调用完整流程或指定角色。主入口明确支持 auto-pilot 全自动和 co-write 共同写作。A 提方案和写作，B 提炼内部基础，C 绘图，D 核外部依据，E 独立追问与评审。
 
 ## 适用范围
 
@@ -16,19 +16,19 @@
 |---|---|
 | 全自动 | `$proposal-creator auto-pilot 依据这份指南和资料完成申请书工作稿。` |
 | 共同写作 | `$proposal-creator co-write 与我先确定结构和指标，再逐节起草、反馈和修订。` |
-| A | `$proposal-creator-writer 与我讨论整体结构和指标统筹。` |
-| B | `$proposal-creator-foundation 从这些旧项目报告提炼可支撑本次任务的基础。` |
-| C | `$proposal-creator-figure 根据已确认方案绘制多尺度测评架构图。` |
-| D | `$proposal-creator-evidence 核验这些论断和引用是否对应。` |
-| E | `$proposal-creator-reviewer 用 grilling 检查技术路线和指标验证方案。` |
+| A | `$proposal-creator writer 与我讨论整体结构和指标统筹。` |
+| B | `$proposal-creator foundation 从这些旧项目报告提炼可支撑本次任务的基础。` |
+| C | `$proposal-creator figure 根据已确认方案绘制多尺度测评架构图。` |
+| D | `$proposal-creator evidence 核验这些论断和引用是否对应。` |
+| E | `$proposal-creator reviewer 用 grilling 检查技术路线和指标验证方案。` |
 
-前两行是同一个主入口的两种模式，仍为六个技能。`co-pilot`、旧 `co-design` 以及“共同写作”“一起写”进入 co-write。也可使用 `$proposal-creator writer …` 等参数形式。主入口与五个角色入口以六个同级 skill 目录部署，逻辑上属于同一套件；共享规则只维护一份。
+`co-pilot`、旧 `co-design` 以及“共同写作”“一起写”进入 co-write。指定单个角色时仅运行该职责。
 
 ## 依赖
 
 复用现有 `nsfc-write`、`nsfc-literature`、`nsfc-figure`、`nature-figure`、`grilling`、`domain-modeling`、`anti-defensive-writing`、`humanizer-zh`；`nsfc-policy` 仅在 NSFC 相关规则核查时调用。非 NSFC 项目只迁移通用论证和工具，不套 NSFC 专属提纲、页数、定位或评分。`grill-with-docs` 可选作为组合入口；本套件适配为 E 追问、A 维护术语与决定，不改原始 skill。
 
-调用前按角色读取依赖，原始依赖不复制入套件。运行主技能 scripts/check_dependencies.py 可检查本机路径；运行 scripts/validate_suite.py 可检查本套件六入口和引用。
+调用前按角色读取依赖，原始依赖不复制入套件。运行主技能 scripts/check_dependencies.py 可检查本机路径；运行 scripts/validate_suite.py 可检查主入口、五个角色和包内引用。
 
 ## 模式与文件
 
@@ -42,6 +42,6 @@ co-write 贯穿整个写作过程：用户与 A 商讨结构和指标 → A 按�
 
 ## 安装
 
-把 skills/ 下六个目录一起部署到宿主的技能目录。五个独立入口引用主目录中的共享规则，不要只复制其中一个。可运行 `./install.ps1 -TargetSkillsRoot <已有技能目录>`；安装脚本会预先检查全部目标，遇到同名目录即停止。更新已有版本时，先备份并移开原六个目录，再安装。
+在 CC Switch 的 Skills 仓库设置中添加本 GitHub 仓库，选择包含此结构的分支，将技能路径设为 `skills`。刷新仓库列表，安装 `proposal-creator` 并为目标宿主启用。安装后，`references/` 包含五份角色说明。手动安装时复制整个 `skills/proposal-creator/` 目录。
 
-若宿主未热加载新入口，刷新技能列表或在新会话中选择；也可显式提供相应 SKILL.md 路径调用。不承诺当前已打开会话的技能目录会自动刷新。
+在仓库根目录运行 `python skills/proposal-creator/scripts/validate_suite.py` 可校验安装包。

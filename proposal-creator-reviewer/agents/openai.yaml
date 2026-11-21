@@ -1,6 +1,0 @@
-interface:
-  display_name: "proposal-creator-reviewer"
-  short_description: "按依赖分轮追问方案，独立检查指南覆盖、证据、创新与指标验证"
-  default_prompt: "使用 $proposal-creator-reviewer，通过 grilling 独立审视方案，提出可执行问题并复核修订。"
-policy:
-  allow_implicit_invocation: false

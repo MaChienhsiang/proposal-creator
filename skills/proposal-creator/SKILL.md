@@ -8,18 +8,18 @@ description: >-
 
 把用户的研究意图、适用申报要求和团队积累转化为可追溯、可检验的申请方案与文稿。既支持有任务指南的项目，也支持自由探索课题。保持五个专业角色，按需要调度，不把角色数量当作并发数量。
 
-## 六个入口
+## 调用方式
 
-| 可直接调用的 skill | 模式 | 主要责任 |
+| 调用示例 | 模式 | 主要责任 |
 |---|---|---|
 | `$proposal-creator` | auto-pilot / co-write | 全自动或与用户共同写作，协调五角色 |
-| `$proposal-creator-writer` | A / writer | 方案与正文 |
-| `$proposal-creator-foundation` | B / foundation | 内部研究基础 |
-| `$proposal-creator-figure` | C / figure | 图件与验收 |
-| `$proposal-creator-evidence` | D / evidence | 外部依据与引用 |
-| `$proposal-creator-reviewer` | E / reviewer | 独立评审、grilling 与复核 |
+| `$proposal-creator writer` | [A / writer](references/writer.md) | 方案与正文 |
+| `$proposal-creator foundation` | [B / foundation](references/foundation.md) | 内部研究基础 |
+| `$proposal-creator figure` | [C / figure](references/figure.md) | 图件与验收 |
+| `$proposal-creator evidence` | [D / evidence](references/evidence.md) | 外部依据与引用 |
+| `$proposal-creator reviewer` | [E / reviewer](references/reviewer.md) | 独立评审、grilling 与复核 |
 
-同一入口接受自然语言参数，例如 `$proposal-creator auto-pilot …`、`$proposal-creator co-write …`、`$proposal-creator reviewer …`。共同写作是主入口的明确模式，不另增第七个技能。`co-pilot` 和旧 `co-design` 是 `co-write` 的别名。这些是本 skill 的参数约定，不宣称宿主支持冒号命令。
+同一入口接受自然语言参数，例如 `$proposal-creator auto-pilot …`、`$proposal-creator co-write …`、`$proposal-creator reviewer …`。`co-pilot` 和旧 `co-design` 是 `co-write` 的别名。这些是本 skill 的参数约定，不宣称宿主支持冒号命令。
 
 ## 启动
 
@@ -32,9 +32,9 @@ description: >-
 
 ## 主控执行方式
 
-主对话执行 A 并承担调度。分别为 B、C、D、E 创建职责明确的子 agent；E 保留独立评审上下文。使用宿主实际提供的委派工具，不创建用户拥有的新聊天。
+全流程由主对话负责调度、转达用户反馈和交付。按任务需要分别委派 A、B、C、D、E 子 agent，A 负责方案与正文；E 保留独立评审上下文。使用宿主实际提供的委派工具，不创建用户拥有的新聊天。
 
-读取当前并发上限。若主对话加工作者最多四个，先 B、D 并行，再 E 结构评审，然后按空闲额度安排 C 和后续补证。完整五角色可以分阶段执行。若宿主不能结束已完成工作者，使用有空闲容量的执行方式；确实无法创建时串行执行对应角色并报告独立性限制，不假称已启动独立 agent。
+读取当前并发上限。若主对话加工作者最多四个，先安排 A 起草结构，B、D 可并行整理材料，随后 E 评审结构，然后按空闲额度安排 C 和后续补证。完整五角色可以分阶段执行。若宿主不能结束已完成工作者，使用有空闲容量的执行方式；确实无法创建时串行执行对应角色并报告独立性限制，不假称已启动独立 agent。
 
 派发任务只给：目标、必要输入、相关来源、当前模式与授权范围、确定与待定事项、角色文件、可写文件、交付物及完成判据。每个角色按需读取原始依赖 skill；不要把所有 skill 全文塞给每个工作者。
 

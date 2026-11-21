@@ -1,6 +1,0 @@
-interface:
-  display_name: "proposal-creator-evidence"
-  short_description: "核对文献原文与正文论断，统一引用并核实标准及申报规则适用性"
-  default_prompt: "使用 $proposal-creator-evidence，核验正文论断与文献、标准或正式申报文件的对应关系及引用格式。"
-policy:
-  allow_implicit_invocation: false
