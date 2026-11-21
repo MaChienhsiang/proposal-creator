@@ -9,6 +9,7 @@
 | proposal.md 或既有主稿 | A | 按适用正式提纲组织的正文 |
 | foundation.md | B | 来源与定位、完成事实、支撑对象/强度、迁移条件、缺口 |
 | evidence.md / references.bib | D | 论断、来源/原文位置、证据层级、支持状态、适用规则与引用 |
+| preprints.md（按需） | D | 预印本登记：预印本标识、题目、可借鉴要点、拟支撑章节/技术路线、不可外推之处；按 [预印本政策](preprint-policy.md) 维护，预印本不进参考文献表 |
 | figures/ | C | 源文件、导出图、图注、图件输入及实际验收状态 |
 | review.md | E | 决策问题的依赖、评审意见、责任、判据、状态与复核依据 |
 | GLOSSARY.md | A | 确定的核心术语、简短定义、容易混用词；遵循 domain-modeling 格式 |

@@ -26,7 +26,7 @@ description: >-
 1. 读取 [共同规则](references/common.md)、[项目适配](references/project-adaptation.md) 和 [依赖路由](references/dependencies.md)。先提取资助类型、领域、研究方法、正式要求和证据判据；独立角色只提取相关部分。
    用户仅咨询、比较或审阅本套件时，只完成该请求，不启动申请书项目。
 2. 根据最新明确指令选路，其次沿用项目已记录的模式；“共同写作”“一起写”“逐节讨论”等均进入 co-write。只有新任务既无模式、也无共同参与意图时才默认 auto-pilot。用户只要求某个角色，读取对应角色文件并仅完成该职责；不要顺势启动全流程。
-3. 全流程读取 [自动与共同写作流程](references/workflow.md)、[文档与交接](references/artifacts.md)，以及 [A 角色](references/writer.md)。co-write 另读 [共同写作](references/co-write.md)。其他角色在派发时读取自己的文件。
+3. 全流程读取 [自动与共同写作流程](references/workflow.md)、[文档与交接](references/artifacts.md)，以及 [A 角色](references/writer.md)。co-write 另读 [共同写作](references/co-write.md)。A 做整章文风对齐时另读 [语言语域统一](references/language-register.md)。其他角色在派发时读取自己的文件。
 4. 优先复用当前项目资料和已确认决定。沿用已有产物目录；没有时采用项目内 `proposal-work/`。尊重用户指定路径，不将申请书存进技能安装目录。
 5. 如需检查依赖，可运行 `python scripts/check_dependencies.py`；只读取检查结果，不自动安装或上传任何材料。
 
