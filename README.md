@@ -45,3 +45,5 @@ co-write 贯穿整个写作过程：用户与 A 商讨结构和指标 → A 按�
 在 CC Switch 的 Skills 仓库设置中添加本 GitHub 仓库，选择包含此结构的分支，将技能路径设为 `skills`。刷新仓库列表，安装 `proposal-creator` 并为目标宿主启用。安装后，`references/` 包含五份角色说明。手动安装时复制整个 `skills/proposal-creator/` 目录。
 
 在仓库根目录运行 `python skills/proposal-creator/scripts/validate_suite.py` 可校验安装包。
+
+需要在技能选择器中直接调用角色时，在宿主已安装的 `proposal-creator` 目录中运行一次 `python scripts/register_roles.py`，然后新开会话。脚本在同级目录注册 `$proposal-creator-writer`、`$proposal-creator-foundation`、`$proposal-creator-figure`、`$proposal-creator-evidence` 和 `$proposal-creator-reviewer`，五个入口共享主包内的角色说明。也可以从仓库运行脚本，用 `--skills-root` 指定包含已安装主包的宿主技能目录。
