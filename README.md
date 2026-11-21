@@ -26,6 +26,8 @@
 
 ## 依赖
 
+Writer 按需调用外部技能 `lieflat-less-ai-tone` 清理中文成稿。示例：`$proposal-creator-writer 给这一版立项依据去 AI 味。` Writer 先提交检测报告和可定位的修改建议，收到回复后按约定改写、复测并交付对比报告。
+
 复用现有 `nsfc-write`、`nsfc-literature`、`nsfc-figure`、`nature-figure`、`grilling`、`domain-modeling`、`anti-defensive-writing`、`humanizer-zh`；`nsfc-policy` 仅在 NSFC 相关规则核查时调用。非 NSFC 项目只迁移通用论证和工具，不套 NSFC 专属提纲、页数、定位或评分。`grill-with-docs` 可选作为组合入口；本套件适配为 E 追问、A 维护术语与决定，不改原始 skill。
 
 调用前按角色读取依赖，原始依赖不复制入套件。运行主技能 scripts/check_dependencies.py 可检查本机路径；运行 scripts/validate_suite.py 可检查主入口、五个角色和包内引用。

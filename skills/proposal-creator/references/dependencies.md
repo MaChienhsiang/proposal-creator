@@ -18,6 +18,7 @@
 | A | domain-modeling | 正在澄清概念、确定术语及重要取舍 |
 | A | anti-defensive-writing | 真实优势与叙事组织，不用于筛选 B 的原始事实 |
 | A | humanizer-zh | 已有正文的自然化润色与语义复核 |
+| A | lieflat-less-ai-tone（按需） | 中文成稿去 AI 味专项检测、改前报告、按用户回复改写及复测 |
 | B | nsfc-write 的研究基础/可行性部分 | 把真实积累对应到新任务 |
 | C | nsfc-figure | 申请书方案、任务、架构和验证图 |
 | C | nature-figure | 数据证据、多面板论证、明确 SVG 示意或 AI 插图 |

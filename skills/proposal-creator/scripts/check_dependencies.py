@@ -41,6 +41,8 @@ def main() -> int:
     roots = roots_for(args.skills_root)
     results = []
     optional = ["grill-with-docs"]
+    if args.role in {"writer", "all"}:
+        optional.append("lieflat-less-ai-tone")
     if args.role in {"all", "evidence"}:
         if args.funding_family == "nsfc":
             names.append("nsfc-policy")
