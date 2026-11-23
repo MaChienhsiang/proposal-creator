@@ -56,7 +56,7 @@ def main() -> int:
             check(f"link:{path.relative_to(root)}:{target}", resolved.is_relative_to(main_root) and resolved.is_file())
     dependencies = (main_root / "references/dependencies.md").read_text(encoding="utf-8")
     for skill in ["nsfc-write", "nsfc-policy", "nsfc-literature", "nsfc-figure", "nature-figure",
-                  "grilling", "domain-modeling", "anti-defensive-writing", "humanizer-zh"]:
+                  "grilling", "domain-modeling", "anti-defensive-writing", "humanizer-zh", "lieflat-less-ai-tone"]:
         check(f"dependency-route:{skill}", skill in dependencies)
     reviewer = (main_root / "references/reviewer.md").read_text(encoding="utf-8")
     workflow = (main_root / "references/workflow.md").read_text(encoding="utf-8")
